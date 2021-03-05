@@ -1,3 +1,6 @@
+/* eslint-disable prefer-template */
+/* eslint-disable brace-style */
+/* eslint-disable no-trailing-spaces */
 const printDir = require('./pwd');
 const printLs = require('./ls');
 
@@ -16,5 +19,4 @@ process.stdin.on('data', (data) => {
     process.stdout.write('You typed: ' + cmd);
     process.stdout.write('\nprompt > ');
   }
-
 });
