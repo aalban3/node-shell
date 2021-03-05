@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable quotes */
 const fs = require("fs");
 
