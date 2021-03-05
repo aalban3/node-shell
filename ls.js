@@ -1,13 +1,14 @@
 /* eslint-disable quotes */
-const fs = require('fs');
+const fs = require("fs");
 
-const ls = fs.readdir('./', 'utf8', (err, files) => {
-  if (err) {
-    throw err;
-  } else {
-    process.stdout.write(files.join('\n'));
-    process.stdout.write("prompt > ");
-  }
+const file = fs.readdirSync("./", "utf8", (err, files) => {
+  if (err) throw err;
 });
 
-module.exports = { ls };
+const ourLs = function () {
+  process.stdout.write(file.join("\n"));
+  process.stdout.write("\n");
+  process.stdout.write("prompt > ");
+};
+
+module.exports = { ourLs };
